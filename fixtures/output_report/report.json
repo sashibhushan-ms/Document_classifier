@@ -1,0 +1,51 @@
+[
+  {
+    "input_path": "d:\\thinksolv\\tast1_fr\\fixtures\\escaped_dollar.docx",
+    "output_path": "d:\\thinksolv\\tast1_fr\\fixtures\\output_report\\no_error\\escaped_dollar.docx",
+    "label": "no_error",
+    "matches": [],
+    "skipped": false
+  },
+  {
+    "input_path": "d:\\thinksolv\\tast1_fr\\fixtures\\has_display_math.docx",
+    "output_path": "d:\\thinksolv\\tast1_fr\\fixtures\\output_report\\formula_error\\has_display_math.docx",
+    "label": "formula_error",
+    "matches": [
+      {
+        "text": "$$A=1$$",
+        "paragraph_index": 1,
+        "offset": 0,
+        "source": "word/document.xml"
+      }
+    ],
+    "skipped": false
+  },
+  {
+    "input_path": "d:\\thinksolv\\tast1_fr\\fixtures\\inline_math_only.docx",
+    "output_path": "d:\\thinksolv\\tast1_fr\\fixtures\\output_report\\no_error\\inline_math_only.docx",
+    "label": "no_error",
+    "matches": [],
+    "skipped": false
+  },
+  {
+    "input_path": "d:\\thinksolv\\tast1_fr\\fixtures\\no_math.docx",
+    "output_path": "d:\\thinksolv\\tast1_fr\\fixtures\\output_report\\no_error\\no_math.docx",
+    "label": "no_error",
+    "matches": [],
+    "skipped": false
+  },
+  {
+    "input_path": "d:\\thinksolv\\tast1_fr\\fixtures\\split_runs_display.docx",
+    "output_path": "d:\\thinksolv\\tast1_fr\\fixtures\\output_report\\formula_error\\split_runs_display.docx",
+    "label": "formula_error",
+    "matches": [
+      {
+        "text": "$$B=2$$",
+        "paragraph_index": 0,
+        "offset": 28,
+        "source": "word/document.xml"
+      }
+    ],
+    "skipped": false
+  }
+]

@@ -1,0 +1,2 @@
+To apply the pastel theme, add this line to the top of frontend/src/main.jsx:
+import './styles/pastel-theme.css'

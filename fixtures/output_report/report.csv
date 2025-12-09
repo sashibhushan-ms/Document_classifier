@@ -1,0 +1,6 @@
+input_path,output_path,label,skipped,match_count
+d:\thinksolv\tast1_fr\fixtures\escaped_dollar.docx,d:\thinksolv\tast1_fr\fixtures\output_report\no_error\escaped_dollar.docx,no_error,False,0
+d:\thinksolv\tast1_fr\fixtures\has_display_math.docx,d:\thinksolv\tast1_fr\fixtures\output_report\formula_error\has_display_math.docx,formula_error,False,1
+d:\thinksolv\tast1_fr\fixtures\inline_math_only.docx,d:\thinksolv\tast1_fr\fixtures\output_report\no_error\inline_math_only.docx,no_error,False,0
+d:\thinksolv\tast1_fr\fixtures\no_math.docx,d:\thinksolv\tast1_fr\fixtures\output_report\no_error\no_math.docx,no_error,False,0
+d:\thinksolv\tast1_fr\fixtures\split_runs_display.docx,d:\thinksolv\tast1_fr\fixtures\output_report\formula_error\split_runs_display.docx,formula_error,False,1

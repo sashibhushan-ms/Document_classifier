@@ -1,0 +1,16 @@
+[
+  {
+    "input_path": "D:\\thinksolv\\tast1_fr\\manual_output\\temp_uploads\\file_0009.docx",
+    "output_path": "D:\\thinksolv\\tast1_fr\\manual_output\\formula_error\\file_0009.docx",
+    "label": "formula_error",
+    "matches": [
+      {
+        "text": "$$ E = mc^2 $$",
+        "paragraph_index": 2,
+        "offset": 0,
+        "source": "word/document.xml"
+      }
+    ],
+    "skipped": false
+  }
+]

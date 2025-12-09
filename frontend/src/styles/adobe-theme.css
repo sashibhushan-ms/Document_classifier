@@ -1,0 +1,438 @@
+/* 
+  Adobe Style Theme
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+
+:root {
+    --adobe-red: #D9C4B0;
+    --adobe-blue: #1473e6;
+    --adobe-blue-hover: #0d66d0;
+    --adobe-bg-grad-start: #f50a18;
+    --adobe-bg-grad-end: #ff4d4d;
+    --gray-50: #EEE6CA;
+    --gray-100: #f5f5f5;
+    --gray-300: #e1e1e1;
+    --gray-500: #999999;
+    --gray-700: #707070;
+    --gray-900: #896C6C;
+
+    --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: white;
+    color: var(--gray-900);
+}
+
+.adobe-page-bg {
+    min-height: 100vh;
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* -- Nav -- */
+.adobe-nav {
+    height: 60px;
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    z-index: 10;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2.1rem;
+}
+
+.logo-icon {
+    color: var(--adobe-red);
+    font-size: 1.2rem;
+}
+
+.logo-text {
+    color: var(--gray-900);
+}
+
+/* -- Main -- */
+.main-content {
+    flex: 1;
+    background: linear-gradient(135deg, #d86f6f 0%, #f0a0a0 40%, white 40%) no-repeat;
+    background-size: 100% 400px;
+    /* Red bar at top */
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* For result view, we might want less intrusive background */
+.results-container .main-content {
+    background: #fbfbfb;
+}
+
+/* -- Hero Card -- */
+.adobe-hero-card {
+    background: white;
+    width: 100%;
+    max-width: 960px;
+    border-radius: 4px;
+    /* Adobe uses small radius usually, or none */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    padding: 60px 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    height: fit-content;
+}
+
+.hero-header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem;
+    margin: 16px 0 8px 0;
+    font-weight: 700;
+    color: var(--gray-900);
+}
+
+.hero-sub {
+    color: var(--gray-700);
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.brand-icon {
+    background: var(--adobe-red);
+    color: white;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto;
+}
+
+/* -- Dropzone -- */
+.adobe-dropzone {
+    width: 100%;
+    max-width: 600px;
+    border: 2px dashed var(--gray-300);
+    padding: 60px 40px;
+    border-radius: 8px;
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.adobe-dropzone.active {
+    background: #f0f8ff;
+    border-color: var(--adobe-blue);
+}
+
+.drop-watermark {
+    position: absolute;
+    font-size: 5rem;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.04);
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.adobe-dropzone.active .drop-watermark {
+    color: rgba(20, 115, 230, 0.1);
+}
+
+.drop-graphic {
+    position: relative;
+    width: 80px;
+    height: 100px;
+}
+
+.file-box {
+    border: 2px solid var(--adobe-blue);
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--adobe-blue);
+    font-weight: bold;
+    font-size: 1.2rem;
+    background: white;
+}
+
+.arrow-circle {
+    position: absolute;
+    bottom: 0;
+    right: -10px;
+    background: var(--adobe-blue);
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+}
+
+.drop-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.or-divider {
+    color: var(--gray-500);
+    font-size: 0.9rem;
+}
+
+.adobe-primary-btn {
+    background: white;
+    color: var(--adobe-red);
+    border: 2px solid var(--adobe-red);
+    padding: 12px 28px;
+    border-radius: 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    z-index: 1;
+}
+
+.adobe-primary-btn:hover {
+    background: var(--adobe-red);
+    color: white;
+}
+
+.adobe-link-btn {
+    background: none;
+    border: none;
+    color: var(--adobe-blue);
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* -- Loading -- */
+.adobe-loading {
+    margin-top: 30px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.adobe-progress {
+    height: 4px;
+    background: var(--gray-300);
+    margin-top: 8px;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.adobe-progress .fill {
+    height: 100%;
+    background: var(--adobe-blue);
+    transition: width 0.3s;
+}
+
+/* -- Results -- */
+.results-container {
+    max-width: 960px;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.adobe-secondary-btn {
+    background: white(--adobe-bg-grad-start);
+    border: 1px solid var(--gray-300);
+    padding: 10px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.adobe-secondary-btn:hover {
+    background: var(--adobe-red);
+    border-color: var(--adobe-bg-grad-start);
+}
+
+.adobe-secondary-btn svg {
+    flex-shrink: 0;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    padding: 8px 14px;
+    border: 1px solid var(--adobe-blue);
+    background: white;
+    color: var(--adobe-blue);
+    border-radius: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.download-btn:hover {
+    background: var(--adobe-blue);
+    color: white;
+}
+
+.download-btn svg {
+    flex-shrink: 0;
+}
+
+.stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.adobe-stat-card {
+    background: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-label {
+    color: var(--gray-700);
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--gray-900);
+}
+
+.error-card .stat-value {
+    color: #d32f2f;
+}
+
+.success-card .stat-value {
+    color: #2e7d32;
+}
+
+.skipped-card .stat-value {
+    color: #757575;
+}
+
+.card-actions {
+    margin-top: 16px;
+    display: flex;
+    gap: 8px;
+}
+
+.card-actions button {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    border: 1px solid var(--gray-300);
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.adobe-table-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--gray-300);
+    color: var(--gray-700);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+td {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--gray-100);
+    vertical-align: top;
+}
+
+.file-name-cell {
+    font-weight: 600;
+}
+
+.adobe-badge {
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.adobe-badge.formula_error {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.adobe-badge.no_error,
+.adobe-badge.clean {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.adobe-badge.skipped {
+    background: #f5f5f5;
+    color: #757575;
+}
+
+.match-count {
+    color: #c62828;
+    font-weight: 600;
+}
+
+.nice-text {
+    color: var(--gray-500);
+    font-style: italic;
+}
